@@ -1,3 +1,4 @@
-# VORSCHAU-MODUS – vor Livegang ersetzen
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://kreith-schadstoffgutachten.de/sitemap.xml
