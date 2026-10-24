@@ -6,7 +6,7 @@
 <title>Schadstoffgutachten München &amp; Frankfurt | KREITH Schadstoffgutachten</title>
 
 <!-- SEO -->
-<meta name="description" content="Schadstoffgutachten für Asbest, PCB und KMF in Bestandsgebäuden – München und Frankfurt am Main. Sachkunde TRGS 519 und TRGS 521, verbindliche Termine.">
+<meta name="description" content="Schadstoffgutachten für Asbest, PCB, KMF und weitere Schadstoffe – vor Sanierung, Abbruch oder nach Wasserschaden. München und Frankfurt am Main.">
 <meta name="keywords" content="Schadstoffgutachten München, Asbestgutachten, TRGS 519, TRGS 521, PCB, KMF, Schadstoffkataster, Frankfurt am Main">
 <meta name="author" content="Alexander Kreith">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"><!-- VORSCHAU: vor Livegang entfernen -->
@@ -23,14 +23,14 @@
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="KREITH Schadstoffgutachten">
 <meta property="og:title" content="Schadstoffgutachten München &amp; Frankfurt | KREITH Schadstoffgutachten">
-<meta property="og:description" content="Unabhängige Schadstoffgutachten nach TRGS 519 & 521 für Asbest, PCB und KMF in München und Frankfurt am Main.">
+<meta property="og:description" content="Unabhängige Schadstoffgutachten nach TRGS 519 & 521 für Asbest, PCB, KMF und weitere Schadstoffe in München und Frankfurt am Main.">
 <meta property="og:url" content="https://kreith-schadstoffgutachten.de/">
 <meta property="og:image" content="https://kreith-schadstoffgutachten.de/images/hero.jpg">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Schadstoffgutachten München &amp; Frankfurt | KREITH Schadstoffgutachten">
-<meta name="twitter:description" content="Unabhängige Schadstoffgutachten nach TRGS 519 & 521. Asbest, PCB, KMF.">
+<meta name="twitter:description" content="Unabhängige Schadstoffgutachten nach TRGS 519 & 521. Asbest, PCB, KMF und weitere Schadstoffe.">
 <meta name="twitter:image" content="https://kreith-schadstoffgutachten.de/images/hero.jpg">
 
 <!-- Schema.org JSON-LD: ProfessionalService -->
@@ -39,7 +39,7 @@
  "@context": "https://schema.org",
  "@type": "ProfessionalService",
  "name": "KREITH Schadstoffgutachten",
- "description": "Unabhängige Schadstoffgutachten für Asbest, PCB und KMF nach TRGS 519 und TRGS 521.",
+ "description": "Unabhängige Schadstoffgutachten für Asbest, PCB, KMF und weitere Gebäudeschadstoffe – vor Sanierung, Abbruch oder nach einem Schadensfall.",
  "url": "https://kreith-schadstoffgutachten.de/",
  "image": "https://kreith-schadstoffgutachten.de/images/hero.jpg",
  "telephone": "+49 156 3016 8503",
@@ -76,7 +76,8 @@
   "Asbestanalyse",
   "PCB- und KMF-Gutachten",
   "Schadstoffkataster",
-  "Kaufberatung und Due Diligence"
+  "Kaufberatung und Due Diligence",
+  "Schadstoffuntersuchung bei Wasserschäden"
  ],
  "hasCredential": [
   "Sachkunde TRGS 519 Nr. 2.7, Anlage 3",
@@ -89,6 +90,7 @@
   "Asbestgutachten",
   "Asbestuntersuchung",
   "PCB-Untersuchung",
+  "Asbest bei Wasserschaden",
   "Künstliche Mineralfasern",
   "Schadstoffkataster",
   "TRGS 519",
@@ -157,6 +159,14 @@
   },
   {
    "@type": "Question",
+   "name": "Was ist bei einem Wasserschaden in einem älteren Gebäude zu beachten?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Bevor Bauteile geöffnet werden, sollte bei Baubeginn vor dem 31.10.1993 geklärt werden, ob die betroffenen Materialien Asbest oder andere Schadstoffe enthalten – etwa Fliesenkleber, Spachtelmassen, Estrich oder Rohrleitungen. Wir beproben unabhängig vom ausführenden Sanierungsbetrieb. Das Ergebnis dient Eigentümer, Hausverwaltung und Versicherer als neutrale Grundlage für Sanierungsumfang und Schadenregulierung."
+   }
+  },
+  {
+   "@type": "Question",
    "name": "Wie lange dauert ein Schadstoffgutachten?",
    "acceptedAnswer": {
     "@type": "Answer",
@@ -192,7 +202,7 @@
    "name": "Bieten Sie auch Portfolio-Mandate für Asset Manager und Bestandshalter an?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Ja. Für institutionelle Kunden – Banken, Asset Manager, REITs und Wohnungsunternehmen – bieten wir portfolio-weite Due Diligence mit einheitlicher Methodik, ESG- und CSRD-konformer Dokumentation sowie Lieferung unter NDA an."
+    "text": "Ja. Für institutionelle Kunden – Banken, Asset Manager, REITs und Wohnungsunternehmen – bieten wir portfolio-weite Due Diligence mit einheitlicher Methodik, ESG- und CSRD-tauglicher Dokumentation sowie Lieferung unter NDA an."
    }
   }
  ]
@@ -902,7 +912,7 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
 /* Anlass-Karten: zweispaltig, Leitfall über die volle Breite */
 .warum-layout{display:block;margin-top:3rem}
 .warum-cards{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:1px solid var(--border)}
-.warum-card:first-child{grid-column:1/-1}
+.warum-card:first-child,.warum-card:nth-child(2){grid-column:1/-1}
 @media(max-width:820px){.warum-cards{grid-template-columns:1fr}}
 
 /* Über mich: eine Karte, breiter gesetzt */
@@ -962,7 +972,7 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
   <span class="hero-tag">München · Frankfurt am Main · bundesweit</span>
  </div>
  <h1>Schadstoffgutachten: Sicherheit im Bestand – ohne <em>Stillstand</em>.</h1>
- <p>Schadstoffgutachten für Asbest, PCB und Künstliche Mineralfasern in Bestandsgebäuden – fachlich belastbar beurteilt und termingerecht geliefert. Hauptstandorte München und Frankfurt am Main, Aufträge übernehmen wir bundesweit.</p>
+ <p>Schadstoffgutachten für Asbest, PCB, Künstliche Mineralfasern und weitere Gebäudeschadstoffe – vor Sanierung, Abbruch oder nach einem Schadensfall, fachlich belastbar beurteilt und termingerecht geliefert. Hauptstandorte München und Frankfurt am Main, Aufträge übernehmen wir bundesweit.</p>
  <div class="hero-actions">
   <a class="btn-white" href="#kontakt">Gutachten anfragen</a>
   <a class="btn-ghost" href="#leistungen">Leistungen ansehen</a>
@@ -991,7 +1001,7 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
  <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
  <div>
   <h3>Akademisch fundiert</h3>
-  <p style="font-weight:500;color:rgba(255,255,255,0.85);margin-bottom:0.2rem">M. A. Immobilienmanagement · B. Sc. Wirtschaftsingenieurwesen</p>
+  <p style="font-weight:500;color:rgba(255,255,255,0.85);margin-bottom:0.2rem">M. A. Immobilienmanagement<br>B. Sc. Wirtschaftsingenieurwesen – Technisches Asset&nbsp;Management</p>
   <p>Asset-Management-Erfahrung – wir kennen die Zahlen hinter dem Befund</p>
  </div>
  </div>
@@ -1007,7 +1017,7 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
 <section id="warum">
  <div class="sec-eye" data-reveal>Anlass</div>
  <h2 class="sec-title" data-reveal data-delay="1">Wann Sie ein Schadstoffgutachten brauchen.</h2>
- <p class="sec-lead" data-reveal data-delay="2">Asbest, PCB, PAK und KMF werden bei Sanierungs- und Abbrucharbeiten freigesetzt und sind krebserzeugend. Meist ist es aber nicht die Gesundheitsfrage, die den Anlass gibt, sondern eine dieser fünf Situationen:</p>
+ <p class="sec-lead" data-reveal data-delay="2">Asbest, PCB, PAK, KMF und weitere Gebäudeschadstoffe werden freigesetzt, sobald Bauteile geöffnet werden – viele davon sind krebserzeugend. Den Anlass gibt meist nicht die Gesundheitsfrage, sondern eine geplante Maßnahme oder ein Schaden:</p>
  <div class="warum-layout">
  <div class="warum-cards" data-reveal data-delay="1">
   <div class="warum-card">
@@ -1016,6 +1026,13 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
    <h3>Nachvermietung nach Auszug</h3>
   </div>
   <p>Der klassische Fall: Die Wohnung wird nach dem Auszug saniert, um sie neu und höher vermieten zu können. Bei Baubeginn vor dem 31.10.1993 gilt die gesetzliche Asbestvermutung. Liegt kein Befund vor, muss der ausführende Betrieb die Erkundung selbst veranlassen oder unter vollem Asbestschutz arbeiten – beides auf Ihre Kosten und zulasten des Zeitplans. Der Befund entscheidet, ob regulär saniert werden kann oder ein Fachbetrieb für Schadstoffsanierung ran muss. Das sind rund 30 % Mehrkosten, die Sie vorher kennen sollten – nicht erst nach Angebotsöffnung.</p>
+  </div>
+  <div class="warum-card">
+  <div class="warum-card-head">
+   <div class="warum-card-icon"><svg viewBox="0 0 24 24"><path d="M12 3c-3 4.6-6 7.7-6 11.2a6 6 0 0012 0C18 10.7 15 7.6 12 3z"/></svg></div>
+   <h3>Wasserschaden und andere Schadensfälle</h3>
+  </div>
+  <p>Nicht jede Bauteilöffnung ist geplant. Nach einem Leitungswasserschaden, bei defekten Strängen oder nach Sturmschäden an Dach und Fassade müssen Estrich, Wände, Schächte oder Verkleidungen kurzfristig geöffnet werden. Auch dann gilt bei Baubeginn vor dem 31.10.1993 die Asbestvermutung – etwa für Fliesenkleber, Spachtelmassen oder Asbestzementrohre. Geklärt werden sollte das vor der Öffnung, durch ein unabhängiges Gutachten – und nicht durch den Betrieb, der den Schaden anschließend saniert und abrechnet. So erhalten Eigentümer, Hausverwaltung und Versicherer eine neutrale Grundlage für Sanierungsumfang und Schadenregulierung.</p>
   </div>
   <div class="warum-card">
   <div class="warum-card-head">
@@ -1066,10 +1083,10 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
   <p>Probenahme nach TRGS 519 an Putzen, Spachtelmassen, Fliesenklebern und Asbestzement. Sie erhalten den Laborbefund, die Einstufung und die Aussage, ob regulär saniert werden darf.</p>
  </div>
  <div class="leist-card" data-reveal data-delay="2">
-  <div class="leist-card-img"><img src="images/leistung-pcb.jpg" loading="lazy" decoding="async" alt="PCB- und KMF-Gutachten nach TRGS 521">
+  <div class="leist-card-img"><img src="images/leistung-pcb.jpg" loading="lazy" decoding="async" alt="PCB- und KMF-Gutachten">
   </div>
   <h3>PCB- &amp; KMF-Gutachten</h3>
-  <p>Fugenmassen, Beschichtungen und alte Mineralwolle nach TRGS 521 – die Stoffe, die bei Entkernung und Fassadenarbeiten am häufigsten übersehen werden.</p>
+  <p>PCB in Fugenmassen und Beschichtungen, alte Mineralwolle nach TRGS 521 – die Stoffe, die bei Entkernung und Fassadenarbeiten am häufigsten übersehen werden.</p>
  </div>
  <div class="leist-card" data-reveal data-delay="3">
   <div class="leist-card-img"><img src="images/leistung-kataster.jpg" loading="lazy" decoding="async" alt="Schadstoffkataster als Grundlage für Sanierung und Rückbau">
@@ -1155,9 +1172,11 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
       <img class="team-photo" src="images/alexander-portrait-2.jpg" loading="lazy" decoding="async" alt="Alexander Kreith, Sachkundiger für Gebäudeschadstoffe nach TRGS 519">
       <div class="team-body">
         <div class="team-name">Alexander Kreith</div>
-        <div class="team-role">Inhaber · Sachkundiger nach TRGS 519</div>
+        <div class="team-role">Inhaber</div>
         <ul class="team-quals">
           <li>Sachkundiger nach TRGS 519</li>
+          <li>Fachkunde nach TRGS 521</li>
+          <li>Gerätefachkunde</li>
           <li>M. A. Immobilienmanagement</li>
           <li>B. Sc. Wirtschaftsingenieurwesen – Technisches Asset Management</li>
         </ul>
@@ -1183,14 +1202,14 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
   <div class="sec-eye">Für institutionelle Kunden</div>
   <h2>Belastbare Befunde für <em>Entscheider</em>.</h2>
   </div>
-  <p>Hausverwaltungen, Bestandshalter und Asset Manager brauchen Schadstoffdaten, die nicht nur technisch korrekt sind, sondern sofort weiterverwendet werden können – für Ausschreibung, Entsorgung, Freigabe oder Gremienvorlage. Genau dafür sind unsere Berichte gebaut.</p>
+  <p>Hausverwaltungen, Bestandshalter, Asset Manager und Versicherer brauchen Schadstoffdaten, die nicht nur technisch korrekt sind, sondern sofort weiterverwendet werden können – für Ausschreibung, Entsorgung, Freigabe oder Gremienvorlage. Genau dafür sind unsere Berichte gebaut.</p>
  </div>
 
  <div class="inst-grid">
   <div class="inst-card">
   <div class="inst-card-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21V12h6v9"/></svg></div>
   <h3>Vom Einzelobjekt bis zum Bestand</h3>
-  <p>Ob einzelne WEG-Wohnung vor Sanierung oder mehrere Objekte im Bestand: gleiche Methodik, gleiche Berichtsstruktur, gleiche Termintreue. München und Frankfurt am Main werden parallel bedient.</p>
+  <p>Ob einzelne WEG-Wohnung vor Sanierung oder mehrere Objekte im Bestand: gleiche Methodik, gleiche Berichtsstruktur, gleiche Termintreue. Neben München übernehmen wir nach Absprache auch Aufträge in Frankfurt am Main.</p>
   </div>
   <div class="inst-card">
   <div class="inst-card-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
@@ -1199,7 +1218,7 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
   </div>
   <div class="inst-card">
   <div class="inst-card-icon"><svg viewBox="0 0 24 24"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
-  <h3>ESG- und CSRD-konform</h3>
+  <h3>ESG- und CSRD-tauglich</h3>
   <p>Schadstoffe sind Teil der EU-Taxonomie und CSRD-Materialität. Ergebnisse werden so dokumentiert, dass sie unmittelbar in ESG-Reports und Sustainability-Statements einfließen können.</p>
   </div>
   <div class="inst-card">
@@ -1215,7 +1234,7 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
   <div class="inst-card">
   <div class="inst-card-icon"><svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
   <h3>Verlässliche Timelines</h3>
-  <p>Bei Transaktions- oder Quartalsfristen entscheidet Geschwindigkeit. Standardisierte Prozesse erlauben verbindliche Liefertermine – mit Eskalationspfad bei Eilbedarf.</p>
+  <p>Bei Transaktions- oder Quartalsfristen entscheidet Geschwindigkeit. Liefertermine stimmen wir vor Auftragserteilung verbindlich mit Ihnen ab. Bei Eilbedarf sprechen Sie uns direkt an – wir prüfen gemeinsam, was möglich ist.</p>
   </div>
  </div>
 
@@ -1233,20 +1252,20 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
   <div class="sec-eye">Nachweise</div>
   <h2 class="sec-title">Qualifikationen & Fachkunde</h2>
  </div>
- <p class="sec-lead" style="max-width:340px;">Behördlich anerkannte Qualifikationsnachweise: Sachkunde nach TRGS 519, Fachkunde nach TRGS 521 und Gerätefachkunde. Begehung, Probenahme und Bewertung übernimmt der Inhaber persönlich.</p>
+ <p class="sec-lead" style="max-width:340px;">Qualifikationsnachweise: Sachkunde nach TRGS 519, Fachkunde nach TRGS 521 und Gerätefachkunde. Begehung, Probenahme und Bewertung übernimmt der Inhaber persönlich.</p>
  </div>
  <div class="qual-grid">
  <div class="qual-card" data-reveal data-delay="1">
   <div class="qual-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
   <h3>Sachkunde Asbest</h3>
   <div class="qual-norm">TRGS 519 · Nr. 2.7, Anlage 3</div>
-  <p>Berechtigung zur Durchführung von Probenahmen, Begehungen und Gutachten bei asbesthaltigen Baumaterialien im Bestand und vor Abbruch.</p>
+  <p>Qualifikation für Begehungen, Probenahmen und Gutachten bei asbesthaltigen Baumaterialien im Bestand und vor Abbruch.</p>
  </div>
  <div class="qual-card">
   <div class="qual-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
   <h3>Fachkunde Mineralfasern</h3>
   <div class="qual-norm">TRGS 521</div>
-  <p>Qualifikation zur fachkundigen Beurteilung und Probenahme bei KMF- und PCB-haltigen Baustoffen in Sanierungs- und Abbruchobjekten.</p>
+  <p>Qualifikation zur fachkundigen Beurteilung und Probenahme bei künstlichen Mineralfasern (alte Mineralwolle) in Sanierungs- und Abbruchobjekten.</p>
  </div>
  <div class="qual-card">
   <div class="qual-badge"><svg viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
@@ -1289,6 +1308,10 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
    <div class="faq-a"><p>Schwerpunkt sind Asbest nach TRGS 519 – in Putzen, Spachtelmassen, Fliesenklebern und Asbestzement –, künstliche Mineralfasern nach TRGS 521 in Dämmungen sowie polychlorierte Biphenyle (PCB) in Fugenmassen und Beschichtungen. Je nach Objekt kommen PAK, Pentachlorphenol (PCP), Schwermetalle, Holzschutzmittel oder Schimmel hinzu.</p></div>
   </details>
   <details class="faq-item">
+   <summary>Was ist bei einem Wasserschaden in einem älteren Gebäude zu beachten?<span class="faq-ico" aria-hidden="true"></span></summary>
+   <div class="faq-a"><p>Bevor Bauteile geöffnet werden, sollte bei Baubeginn vor dem 31.10.1993 geklärt werden, ob die betroffenen Materialien Asbest oder andere Schadstoffe enthalten – etwa Fliesenkleber, Spachtelmassen, Estrich oder Rohrleitungen. Wir beproben unabhängig vom ausführenden Sanierungsbetrieb. Das Ergebnis dient Eigentümer, Hausverwaltung und Versicherer als neutrale Grundlage für Sanierungsumfang und Schadenregulierung.</p></div>
+  </details>
+  <details class="faq-item">
    <summary>Wie lange dauert ein Schadstoffgutachten?<span class="faq-ico" aria-hidden="true"></span></summary>
    <div class="faq-a"><p>Eine Standard-Untersuchung umfasst Ortstermin, Probenahme nach TRGS 519, Laboranalyse in einem nach DIN EN ISO/IEC 17025 akkreditierten Prüflabor und Bericht. Je nach Objektgröße rechnet man mit 5–15 Werktagen. Bei Transaktions- und Eilfristen ist eine beschleunigte Bearbeitung möglich.</p></div>
   </details>
@@ -1306,7 +1329,7 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
   </details>
   <details class="faq-item">
    <summary>Bieten Sie auch Portfolio-Mandate für Asset Manager und Bestandshalter an?<span class="faq-ico" aria-hidden="true"></span></summary>
-   <div class="faq-a"><p>Ja. Für institutionelle Kunden – Banken, Asset Manager, REITs und Wohnungsunternehmen – bieten wir portfolio-weite Due Diligence mit einheitlicher Methodik, ESG- und CSRD-konformer Dokumentation sowie Lieferung unter NDA an.</p></div>
+   <div class="faq-a"><p>Ja. Für institutionelle Kunden – Banken, Asset Manager, REITs und Wohnungsunternehmen – bieten wir portfolio-weite Due Diligence mit einheitlicher Methodik, ESG- und CSRD-tauglicher Dokumentation sowie Lieferung unter NDA an.</p></div>
   </details>
   <div class="faq-more">Ihre Frage ist nicht dabei? <a href="#kontakt">Stellen Sie sie uns direkt</a> – eine kurze Einschätzung kostet nichts.</div>
  </div>
