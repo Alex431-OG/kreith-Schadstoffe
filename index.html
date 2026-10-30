@@ -928,6 +928,14 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
 /* Abstand Vorgehen -> Unser Ansatz verkleinert */
 #ablauf{padding-bottom:2.5rem}
 #tempo{padding-top:3rem}
+
+/* ===== HERO: Inhalt nie unter der fixierten Navigation (Firefox/kleinere Fensterhöhen) ===== */
+@media(min-width:481px){
+ #hero{height:auto;min-height:100vh;padding-top:0;padding-bottom:0}
+ .hero-content{padding-top:calc(88px + 1.75rem)}
+}
+@media(min-width:481px) and (max-width:900px){.hero-content{padding-top:calc(72px + 2rem)}}
+nav ul a{white-space:nowrap}
 </style>
 </head>
 <body>
