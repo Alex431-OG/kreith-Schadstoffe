@@ -1,0 +1,28 @@
+name: News aktualisieren
+ 
+on:
+  schedule:
+    - cron: "17 5,11,17 * * *"   # 3x taeglich (UTC)
+  workflow_dispatch:            # manuell startbar ueber "Run workflow"
+ 
+permissions:
+  contents: write
+ 
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Feed abrufen
+        run: python scripts/fetch_news.py
+      - name: Aenderungen speichern
+        run: |
+          git config user.name "news-bot"
+          git config user.email "news-bot@users.noreply.github.com"
+          git add news.json
+          git diff --cached --quiet || git commit -m "News aktualisiert"
+          git push
+ 
