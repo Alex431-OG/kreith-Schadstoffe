@@ -486,79 +486,42 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu
   });
 })();
 
-// ── LIVE-NEWS via Google News RSS ─────────────
+// ── LIVE-NEWS: news.json wird per GitHub Action aus Google News erzeugt ──
 (function(){
   var grid    = document.getElementById('live-news-grid');
   var updated = document.getElementById('live-news-updated');
   if(!grid) return;
 
-  var FEED = 'https://news.google.com/rss/search?q=Asbest+OR+Schadstoffgutachten+OR+Gefahrstoffverordnung+OR+Asbestsanierung&hl=de&gl=DE&ceid=DE:de';
-
-  var PROXIES = [
-    function(u){ return 'https://api.allorigins.win/raw?url=' + encodeURIComponent(u); },
-    function(u){ return 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u); },
-    function(u){ return 'https://corsproxy.io/?url=' + encodeURIComponent(u); }
-  ];
-
-  function fetchWithTimeout(url, ms){
-    return new Promise(function(resolve, reject){
-      var done = false;
-      var t = setTimeout(function(){ if(!done){ done = true; reject(new Error('Timeout')); } }, ms);
-      fetch(url).then(function(r){
-        if(!done){ done = true; clearTimeout(t);
-          if(!r.ok) reject(new Error('HTTP ' + r.status)); else resolve(r.text()); }
-      }).catch(function(e){ if(!done){ done = true; clearTimeout(t); reject(e); } });
-    });
-  }
-
   function esc(s){
     return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
                     .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
-
-  function render(xml){
-    var doc = new DOMParser().parseFromString(xml, 'application/xml');
-    if(doc.querySelector('parsererror')) throw new Error('XML ungueltig');
-    var items = Array.prototype.slice.call(doc.querySelectorAll('item')).slice(0, 6);
-    if(!items.length) throw new Error('Keine Beitraege');
-
-    grid.innerHTML = items.map(function(it){
-      function val(tag){ var e = it.querySelector(tag); return e ? e.textContent : ''; }
-      var title = val('title').replace(/\s+-\s+[^-]+$/, '');
-      var link  = val('link');
-      var pub   = val('pubDate');
-      var src   = val('source') || 'Google News';
-      var date  = '';
-      if(pub){ var d = new Date(pub);
-        if(!isNaN(d)) date = d.toLocaleDateString('de-DE',{day:'2-digit',month:'short',year:'numeric'}); }
-      return '<a class="live-news-item" href="' + esc(link) + '" target="_blank" rel="noopener noreferrer">'
-           +   '<div class="live-news-source">' + esc(src) + '</div>'
-           +   '<h4>' + esc(title) + '</h4>'
-           +   '<div class="live-news-date">' + esc(date) + '</div>'
-           + '</a>';
-    }).join('');
-
-    if(updated){
-      updated.textContent = new Date().toLocaleString('de-DE',
-        {day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
-    }
+  function fmt(iso, withTime){
+    var d = new Date(iso); if(!iso || isNaN(d)) return '';
+    var o = {day:'2-digit',month:'short',year:'numeric'};
+    if(withTime){ o.hour='2-digit'; o.minute='2-digit'; }
+    return d.toLocaleString('de-DE', o);
+  }
+  function fail(){
+    grid.innerHTML = '<div class="live-news-error">Aktuelle Beitr\u00e4ge sind gerade nicht verf\u00fcgbar. '
+                   + 'Die kuratierte Auswahl oben ist weiterhin abrufbar.</div>';
   }
 
-  function tryProxy(i){
-    if(i >= PROXIES.length){
-      grid.innerHTML = '<div class="live-news-error">Aktuelle Beitr\u00e4ge konnten momentan nicht geladen werden. '
-                     + 'Die kuratierte Auswahl oben ist weiterhin verf\u00fcgbar.</div>';
-      return;
-    }
-    fetchWithTimeout(PROXIES[i](FEED), 8000)
-      .then(function(xml){
-        try { render(xml); }
-        catch(e){ console.warn('Feed-Parsing fehlgeschlagen (Proxy ' + i + '):', e); tryProxy(i + 1); }
-      })
-      .catch(function(err){ console.warn('Proxy ' + i + ' fehlgeschlagen:', err); tryProxy(i + 1); });
-  }
-
-  tryProxy(0);
+  fetch('news.json?v=' + Date.now(), {cache:'no-store'})
+    .then(function(r){ if(!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(function(data){
+      var items = (data && data.items) || [];
+      if(!items.length) return fail();
+      grid.innerHTML = items.map(function(it){
+        return '<a class="live-news-item" href="' + esc(it.link) + '" target="_blank" rel="noopener noreferrer">'
+             +   '<div class="live-news-source">' + esc(it.source || 'Google News') + '</div>'
+             +   '<h4>' + esc(it.title) + '</h4>'
+             +   '<div class="live-news-date">' + esc(fmt(it.date)) + '</div>'
+             + '</a>';
+      }).join('');
+      if(updated) updated.textContent = fmt(data.updated, true) || '–';
+    })
+    .catch(function(e){ console.warn('News konnten nicht geladen werden:', e); fail(); });
 })();
 </script>
 </body>
