@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Schadstoffgutachten München &amp; Frankfurt | KREITH Schadstoffgutachten</title>
+<title>Schadstoffgutachten München &amp; bundesweit | KREITH Schadstoffgutachten</title>
 
 <!-- SEO -->
-<meta name="description" content="Schadstoffgutachten für Asbest, PCB, KMF und weitere Schadstoffe – vor Sanierung, Abbruch oder nach Wasserschaden. München und Frankfurt am Main.">
-<meta name="keywords" content="Schadstoffgutachten München, Asbestgutachten, TRGS 519, TRGS 521, PCB, KMF, Schadstoffkataster, Frankfurt am Main">
+<meta name="description" content="Schadstoffgutachten für Asbest, PCB, KMF und weitere Schadstoffe – vor Sanierung, Abbruch oder nach Wasserschaden. Sitz in München, Einsatz bundesweit.">
+<meta name="keywords" content="Schadstoffgutachten München, Asbestgutachten, TRGS 519, TRGS 521, PCB, KMF, Schadstoffkataster, bundesweit">
 <meta name="author" content="Alexander Kreith">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"><!-- VORSCHAU: vor Livegang entfernen -->
 <link rel="canonical" href="https://kreith-schadstoffgutachten.de/">
@@ -22,14 +22,14 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
 <meta property="og:site_name" content="KREITH Schadstoffgutachten">
-<meta property="og:title" content="Schadstoffgutachten München &amp; Frankfurt | KREITH Schadstoffgutachten">
-<meta property="og:description" content="Unabhängige Schadstoffgutachten nach TRGS 519 & 521 für Asbest, PCB, KMF und weitere Schadstoffe in München und Frankfurt am Main.">
+<meta property="og:title" content="Schadstoffgutachten München &amp; bundesweit | KREITH Schadstoffgutachten">
+<meta property="og:description" content="Unabhängige Schadstoffgutachten nach TRGS 519 & 521 für Asbest, PCB, KMF und weitere Schadstoffe – bundesweit.">
 <meta property="og:url" content="https://kreith-schadstoffgutachten.de/">
 <meta property="og:image" content="https://kreith-schadstoffgutachten.de/images/hero.jpg">
 
 <!-- Twitter / X -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Schadstoffgutachten München &amp; Frankfurt | KREITH Schadstoffgutachten">
+<meta name="twitter:title" content="Schadstoffgutachten München &amp; bundesweit | KREITH Schadstoffgutachten">
 <meta name="twitter:description" content="Unabhängige Schadstoffgutachten nach TRGS 519 & 521. Asbest, PCB, KMF und weitere Schadstoffe.">
 <meta name="twitter:image" content="https://kreith-schadstoffgutachten.de/images/hero.jpg">
 
@@ -62,10 +62,6 @@
   {
    "@type": "City",
    "name": "München"
-  },
-  {
-   "@type": "City",
-   "name": "Frankfurt am Main"
   },
   {
    "@type": "Country",
@@ -936,6 +932,63 @@ footer .copy{color:rgba(255,255,255,0.6)!important;font-size:0.78rem!important}
 }
 @media(min-width:481px) and (max-width:900px){.hero-content{padding-top:calc(72px + 2rem)}}
 nav ul a{white-space:nowrap}
+
+/* ===== Anlass: Wendekarten ===== */
+.flip-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border:1px solid var(--border);margin-top:3rem}
+.flip{position:relative;cursor:pointer;perspective:1400px;display:grid;outline:none;-webkit-tap-highlight-color:transparent}
+.flip-inner{display:grid;transition:transform .7s cubic-bezier(.16,1,.3,1);transform-style:preserve-3d;-webkit-transform-style:preserve-3d}
+.flip.is-flipped .flip-inner{transform:rotateY(180deg)}
+.flip-face{grid-area:1/1;-webkit-backface-visibility:hidden;backface-visibility:hidden;background:#fff;padding:2.2rem 2rem 1.8rem;display:flex;flex-direction:column;min-height:270px}
+.flip-front{transition:background .25s}
+.flip:hover .flip-front{background:var(--cream)}
+.flip-back{transform:rotateY(180deg);background:var(--accent);color:#fff}
+.flip-icon{width:46px;height:46px;border-radius:50%;background:var(--accent-l);display:flex;align-items:center;justify-content:center;margin-bottom:1.4rem}
+.flip-icon svg{width:21px;height:21px;fill:none;stroke:var(--accent);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.flip h3{font-size:1.08rem;font-weight:500;color:var(--dark);margin-bottom:.45rem;line-height:1.3}
+.flip-front p{font-size:.95rem;color:var(--muted);line-height:1.6}
+.flip-back h3{color:#fff;font-size:.98rem;margin-bottom:.7rem}
+.flip-back p{font-size:.88rem;line-height:1.65;color:rgba(255,255,255,.88)}
+.flip-hint{margin-top:auto;padding-top:1.3rem;font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.flip-back .flip-hint{color:#a8dcbf}
+.flip:focus-visible .flip-face{box-shadow:inset 0 0 0 2px var(--accent)}
+.flip:focus-visible .flip-back{box-shadow:inset 0 0 0 2px #a8dcbf}
+@media(max-width:900px){.flip-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.flip-grid{grid-template-columns:1fr}.flip-face{min-height:0;padding:1.6rem 1.4rem 1.4rem}}
+@media(prefers-reduced-motion:reduce){.flip-inner{transition:none}}
+/* ===== Ablauf: Bild + Nummer + Text ===== */
+#ablauf .ablauf-step-img{aspect-ratio:16/10;border-radius:6px;margin-bottom:1.3rem;position:static;overflow:hidden}
+#ablauf .ablauf-step-img img{object-position:center top;filter:none}
+#ablauf .ablauf-step-num{font-family:'DM Serif Display',serif;font-size:1.7rem;color:var(--accent);line-height:1;margin-bottom:.5rem}
+#ablauf .ablauf-step h3{font-size:1.08rem;font-weight:500;color:var(--dark);margin-bottom:.35rem}
+#ablauf .ablauf-step p{font-size:.92rem;color:var(--muted);line-height:1.6}
+@media(min-width:601px) and (max-width:900px){#ablauf .ablauf-grid{grid-template-columns:repeat(3,1fr);gap:1.4rem}}
+
+/* ===== Wendekarten: Varianten ===== */
+.flip-num{font-family:'DM Serif Display',serif;font-size:2rem;color:var(--accent);line-height:1;margin-bottom:1.3rem;opacity:.55}
+.flip-grid--3{margin-top:0}
+.flip-grid--3 .flip-face{min-height:250px}
+#tempo .flip-front{background:var(--cream)}
+#tempo .flip:hover .flip-front{background:#fff}
+.flip-badge{width:42px;height:42px;background:var(--accent);border-radius:2px;display:flex;align-items:center;justify-content:center;margin-bottom:1.3rem}
+.flip-badge svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.5}
+.flip-norm{font-size:.72rem;color:var(--accent);font-weight:500;letter-spacing:.06em;margin-bottom:.5rem}
+.flip-grid--qual{margin-bottom:1.5rem}
+.flip-grid--dark{background:transparent;border:0;gap:1.2rem;margin-top:0}
+.flip-grid--dark .flip-face{border-radius:6px;min-height:240px}
+.flip-grid--dark .flip-front{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1)}
+.flip-grid--dark .flip:hover .flip-front{background:rgba(255,255,255,.07);border-color:rgba(125,201,160,.3)}
+.flip-grid--dark .flip-front h3{color:#fff}
+.flip-grid--dark .flip-front p{color:rgba(255,255,255,.6)}
+.flip-grid--dark .flip-front .flip-hint{color:#7dc9a0}
+.flip-grid--dark .flip-back{background:#7dc9a0;color:var(--dark)}
+.flip-grid--dark .flip-back h3{color:var(--dark)}
+.flip-grid--dark .flip-back p{color:rgba(26,26,24,.85)}
+.flip-grid--dark .flip-back .flip-hint{color:var(--accent)}
+.flip-icon--line{background:transparent;width:auto;height:auto;justify-content:flex-start;border-radius:0}
+.flip-icon--line svg{width:34px;height:34px;stroke:#7dc9a0;stroke-width:1.3}
+@media(max-width:900px){.flip-grid--3{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:760px){.flip-grid--3{grid-template-columns:1fr}}
+.team-proof a{color:#7dc9a0;text-decoration:none;font-size:.88rem}.team-proof a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
@@ -949,7 +1002,7 @@ nav ul a{white-space:nowrap}
   <a href="#leistungen" onclick="closeMenu()">Leistungen</a>
   <a href="gefahrstoffe.html" onclick="closeMenu()">Gefahrstoffe</a>
   <a href="mediathek.html" onclick="closeMenu()">Mediathek</a>
-  <a href="#ueber" onclick="closeMenu()">Über mich</a></li>
+  <a href="#ueber" onclick="closeMenu()">Über uns</a></li>
       <li><a href="#faq" onclick="closeMenu()">FAQ</a>
   <div class="nav-overlay-divider"></div>
   <a href="#kontakt" class="nav-overlay-cta" onclick="closeMenu()">Anfrage stellen</a>
@@ -963,7 +1016,7 @@ nav ul a{white-space:nowrap}
     <li><a href="#leistungen">Leistungen</a></li>
     <li><a href="mediathek.html">Mediathek</a></li>
     <li><a href="gefahrstoffe.html">Gefahrstoffe</a></li>
-    <li><a href="#ueber">Über mich</a></li>
+    <li><a href="#ueber">Über uns</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
   <a class="nav-cta" href="#kontakt">Anfrage stellen</a>
@@ -977,18 +1030,17 @@ nav ul a{white-space:nowrap}
   <span class="hero-tag">Sachkunde TRGS 519 Anlage 3</span>
   <span class="hero-tag">Fachkunde TRGS 521</span>
   <span class="hero-tag">Gerätefachkunde</span>
-  <span class="hero-tag">München · Frankfurt am Main · bundesweit</span>
+  <span class="hero-tag">Bundesweit im Einsatz</span>
  </div>
  <h1>Schadstoffgutachten: Sicherheit im Bestand – ohne <em>Stillstand</em>.</h1>
- <p>Schadstoffgutachten für Asbest, PCB, Künstliche Mineralfasern und weitere Gebäudeschadstoffe – vor Sanierung, Abbruch oder nach einem Schadensfall, fachlich belastbar beurteilt und termingerecht geliefert. Hauptstandorte München und Frankfurt am Main, Aufträge übernehmen wir bundesweit.</p>
+ <p>Schadstoffgutachten für Asbest, PCB, Künstliche Mineralfasern und weitere Gebäudeschadstoffe – vor Sanierung, Abbruch oder nach einem Schadensfall, fachlich belastbar beurteilt und termingerecht geliefert. Bundesweit, mit Sitz in München.</p>
  <div class="hero-actions">
   <a class="btn-white" href="#kontakt">Gutachten anfragen</a>
   <a class="btn-ghost" href="#leistungen">Leistungen ansehen</a>
  </div>
  <div class="hero-stats">
   <div class="hero-stat"><div class="num" data-count="10" data-suffix="+">10+</div><div class="lbl">Jahre in der Immobilienwirtschaft</div></div>
-  <div class="hero-stat"><div class="num" data-count="100" data-suffix=" %">100 %</div><div class="lbl">Begehungen durch den Inhaber selbst</div></div>
-  <div class="hero-stat"><div class="num" data-count="24" data-suffix=" h">24 h</div><div class="lbl">Rückmeldung auf Anfragen</div></div>
+  <div class="hero-stat"><div class="num" data-count="24" data-suffix=" h">24 h</div><div class="lbl">bis zu Ihrem Angebot</div></div>
  </div>
 
  </div>
@@ -1015,63 +1067,109 @@ nav ul a{white-space:nowrap}
  </div>
  <div class="trust-item" style="align-items:center">
  <div class="trust-icon"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
- <div><h3>Standorte</h3>
-      <p style="font-weight:500;color:rgba(255,255,255,0.85);margin-bottom:0.2rem">München &amp; Frankfurt am Main</p>
-      <p>Hauptstandorte – Aufträge übernehmen wir bundesweit</p></div>
+ <div><h3>Einsatzgebiet</h3>
+      <p style="font-weight:500;color:rgba(255,255,255,0.85);margin-bottom:0.2rem">Bundesweit</p>
+      <p>Sitz in München</p></div>
  </div>
 </div>
 
 <!-- WARUM -->
 <section id="warum">
  <div class="sec-eye" data-reveal>Anlass</div>
- <h2 class="sec-title" data-reveal data-delay="1">Wann Sie ein Schadstoffgutachten brauchen.</h2>
- <p class="sec-lead" data-reveal data-delay="2">Asbest, PCB, PAK, KMF und weitere Gebäudeschadstoffe werden freigesetzt, sobald Bauteile geöffnet werden – viele davon sind krebserzeugend. Den Anlass gibt meist nicht die Gesundheitsfrage, sondern eine geplante Maßnahme oder ein Schaden:</p>
- <div class="warum-layout">
- <div class="warum-cards" data-reveal data-delay="1">
-  <div class="warum-card">
-  <div class="warum-card-head">
-   <div class="warum-card-icon"><svg viewBox="0 0 24 24"><path d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg></div>
-   <h3>Nachvermietung nach Auszug</h3>
+ <h2 class="sec-title" data-reveal data-delay="1">Wann Sie ein Gutachten brauchen.</h2>
+ <p class="sec-lead" data-reveal data-delay="2">Asbest, PCB, PAK, KMF und weitere Schadstoffe werden freigesetzt, sobald Bauteile geöffnet werden. Den Anlass gibt meist eine geplante Maßnahme oder ein Schaden – tippen Sie auf eine Karte für Details.</p>
+ <div class="flip-grid" data-reveal data-delay="1">
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Sanierung nach Auszug – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"/></svg></div>
+     <h3>Sanierung nach Auszug</h3>
+     <p>Klarheit, bevor Handwerker starten.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>Sanierung nach Auszug</h3>
+     <p>Bei Baubeginn vor dem 31.10.1993 gilt die gesetzliche Asbestvermutung. Ohne Befund muss der ausführende Betrieb selbst erkunden lassen oder unter vollem Asbestschutz arbeiten. Das Gutachten zeigt vorab, ob regulär saniert werden kann – oder rund 30 % Mehrkosten anstehen.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
   </div>
-  <p>Der klassische Fall: Die Wohnung wird nach dem Auszug saniert, um sie neu und höher vermieten zu können. Bei Baubeginn vor dem 31.10.1993 gilt die gesetzliche Asbestvermutung. Liegt kein Befund vor, muss der ausführende Betrieb die Erkundung selbst veranlassen oder unter vollem Asbestschutz arbeiten – beides auf Ihre Kosten und zulasten des Zeitplans. Der Befund entscheidet, ob regulär saniert werden kann oder ein Fachbetrieb für Schadstoffsanierung ran muss. Das sind rund 30 % Mehrkosten, die Sie vorher kennen sollten – nicht erst nach Angebotsöffnung.</p>
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Wasserschaden – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c-3 4.6-6 7.7-6 11.2a6 6 0 0012 0C18 10.7 15 7.6 12 3z"/></svg></div>
+     <h3>Wasserschaden</h3>
+     <p>Prüfen, bevor Bauteile geöffnet werden.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>Wasserschaden</h3>
+     <p>Nach Leitungswasser- oder Sturmschäden müssen Estrich, Wände oder Schächte kurzfristig geöffnet werden – auch dann gilt die Asbestvermutung. Geklärt wird das vor der Öffnung und unabhängig vom Sanierungsbetrieb: eine neutrale Grundlage für Eigentümer, Hausverwaltung und Versicherer.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
   </div>
-  <div class="warum-card">
-  <div class="warum-card-head">
-   <div class="warum-card-icon"><svg viewBox="0 0 24 24"><path d="M12 3c-3 4.6-6 7.7-6 11.2a6 6 0 0012 0C18 10.7 15 7.6 12 3z"/></svg></div>
-   <h3>Wasserschaden und andere Schadensfälle</h3>
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Abbruch & Entsorgung – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1"/></svg></div>
+     <h3>Abbruch & Entsorgung</h3>
+     <p>Herkunftsnachweis für Deponie und Entsorger.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>Abbruch & Entsorgung</h3>
+     <p>Deponien und Recyclinganlagen verweigern zunehmend Material ohne belastbaren Herkunftsnachweis. Ohne Analyse wird pauschal als gefährlicher Abfall eingestuft – zum Vielfachen der regulären Kosten. Das Gutachten amortisiert sich hier häufig sofort.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
   </div>
-  <p>Nicht jede Bauteilöffnung ist geplant. Nach einem Leitungswasserschaden, bei defekten Strängen oder nach Sturmschäden an Dach und Fassade müssen Estrich, Wände, Schächte oder Verkleidungen kurzfristig geöffnet werden. Auch dann gilt bei Baubeginn vor dem 31.10.1993 die Asbestvermutung – etwa für Fliesenkleber, Spachtelmassen oder Asbestzementrohre. Geklärt werden sollte das vor der Öffnung, durch ein unabhängiges Gutachten – und nicht durch den Betrieb, der den Schaden anschließend saniert und abrechnet. So erhalten Eigentümer, Hausverwaltung und Versicherer eine neutrale Grundlage für Sanierungsumfang und Schadenregulierung.</p>
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Pflichten nach GefStoffV – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+     <h3>Pflichten nach GefStoffV</h3>
+     <p>Informationspflicht als Eigentümer erfüllen.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>Pflichten nach GefStoffV</h3>
+     <p>Seit der Novelle der Gefahrstoffverordnung (12/2024) müssen Eigentümer dem ausführenden Unternehmen vor Sanierung oder Abbruch alle Informationen zur Bau- und Nutzungsgeschichte schriftlich mitteilen. Fehlt ein Nachweis, verzögert sich der Start – auf Ihre Kosten.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
   </div>
-  <div class="warum-card">
-  <div class="warum-card-head">
-   <div class="warum-card-icon"><svg viewBox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1"/></svg></div>
-   <h3>Abbruch, Entkernung und Entsorgung</h3>
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Ankauf & Due Diligence – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+     <h3>Ankauf & Due Diligence</h3>
+     <p>Schadstoffrisiko vor dem Signing kennen.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>Ankauf & Due Diligence</h3>
+     <p>Schadstoffrisiken stehen selten im Exposé. Ein Befund vor dem Signing deckt verdeckte Belastungen auf und schafft eine belastbare Verhandlungsgrundlage – für Käufer, Investoren und Asset Manager.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
   </div>
-  <p>Deponien und Recyclinganlagen verweigern zunehmend die Annahme, wenn die Herkunft des Materials nicht belastbar nachgewiesen ist. Ohne Analyse wird pauschal als gefährlicher Abfall eingestuft – zum Vielfachen der regulären Entsorgungskosten. Ein Gutachten vor Beginn der Arbeiten amortisiert sich hier häufig unmittelbar.</p>
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Finanzierung – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"/></svg></div>
+     <h3>Finanzierung</h3>
+     <p>Belastbare Unterlagen für die Bankprüfung.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>Finanzierung</h3>
+     <p>Banken berücksichtigen Schadstoffrisiken zunehmend in der Risikobewertung; unentdeckte Belastungen können den Beleihungswert mindern. Ein vorliegendes Gutachten beschleunigt die Bankprüfung, statt sie aufzuhalten.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
   </div>
-  <div class="warum-card">
-  <div class="warum-card-head">
-   <div class="warum-card-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
-   <h3>Sie sind Eigentümer und in der Pflicht</h3>
-  </div>
-  <p>Seit der Novelle der Gefahrstoffverordnung (12/2024) müssen Sie dem ausführenden Unternehmen vor Sanierung oder Abbruch alle Informationen zur Bau- und Nutzungsgeschichte schriftlich mitteilen. Liegt kein Nachweis vor, muss das Unternehmen die Erkundung selbst veranlassen – mit Verzögerung und auf Ihre Kosten.</p>
-  </div>
-  <div class="warum-card">
-  <div class="warum-card-head">
-   <div class="warum-card-icon"><svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
-   <h3>Ankauf und Due Diligence</h3>
-  </div>
-  <p>Schadstoffrisiken stehen selten im Exposé. Ein Befund vor Signing deckt verdeckte Belastungen auf und schafft eine belastbare Verhandlungsgrundlage – für Käufer, Investoren und Asset Manager.</p>
-  </div>
-  <div class="warum-card">
-  <div class="warum-card-head">
-   <div class="warum-card-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6M9 10h.01M15 10h.01"/></svg></div>
-   <h3>Finanzierung und Refinanzierung</h3>
-  </div>
-  <p>Banken berücksichtigen Schadstoffrisiken zunehmend in der Risikobewertung. Unentdeckte Belastungen können den Beleihungswert spürbar reduzieren. Ein vorliegendes Gutachten beschleunigt die Bankenprüfung statt sie aufzuhalten.</p>
-  </div>
-</div>
-  </div>
+ </div>
 </section>
 
 <!-- LEISTUNGEN -->
@@ -1116,21 +1214,27 @@ nav ul a{white-space:nowrap}
 </section>
 <!-- ABLAUF -->
 <section id="ablauf">
- <div class="sec-eye" data-reveal>Vorgehen</div>
- <h2 class="sec-title" data-reveal data-delay="1">Strukturiert. Transparent. Nachvollziehbar.</h2>
- <p class="sec-lead" data-reveal data-delay="2">Ein Befund ohne Fund ist das beste Ergebnis – aber nur so viel wert wie die Suche davor. Deshalb: von der ersten Begehung bis zum fertigen Gutachten bei Bedarf strukturiert nach VDI 6202 Blatt 3 und ohne unnötige Wartezeiten. Die Laboranalytik läuft ausnahmslos über ein nach DIN EN ISO/IEC 17025 akkreditiertes Prüflabor, dessen Akkreditierung das jeweilige Verfahren ausdrücklich abdeckt.</p>
+ <div class="sec-eye" data-reveal>Ablauf</div>
+ <h2 class="sec-title" data-reveal data-delay="1">In drei Schritten zum Befund.</h2>
+ <p class="sec-lead" data-reveal data-delay="2">Ein Befund ohne Fund ist das beste Ergebnis – aber nur so viel wert wie die Suche davor.</p>
  <div class="ablauf-grid">
   <div class="ablauf-step" data-reveal data-delay="1">
-   <div class="ablauf-step-img"><img src="images/prozess-begehung.jpg" loading="lazy" decoding="async" alt="Begehung und Bestandsaufnahme durch den Schadstoffgutachter">
-   </div>
+   <div class="ablauf-step-img"><img src="images/prozess-begehung.jpg" loading="lazy" decoding="async" alt="Begehung und Bestandsaufnahme im Objekt"></div>
+   <div class="ablauf-step-num">01</div>
+   <h3>Begehung</h3>
+   <p>Ortstermin, Verdachtsstellen erfassen.</p>
   </div>
   <div class="ablauf-step" data-reveal data-delay="2">
-   <div class="ablauf-step-img"><img src="images/prozess-probenahme.jpg" loading="lazy" decoding="async" alt="Probenahme für die Asbestanalyse im Labor">
-   </div>
+   <div class="ablauf-step-img"><img src="images/prozess-probenahme.jpg" loading="lazy" decoding="async" alt="Probenahme und Laboranalyse"></div>
+   <div class="ablauf-step-num">02</div>
+   <h3>Probenahme &amp; Labor</h3>
+   <p>Akkreditiertes Labor nach DIN EN ISO/IEC 17025.</p>
   </div>
   <div class="ablauf-step" data-reveal data-delay="3">
-   <div class="ablauf-step-img"><img src="images/prozess-bericht.jpg" loading="lazy" decoding="async" alt="Fertiges Schadstoffgutachten mit Handlungsempfehlung">
-   </div>
+   <div class="ablauf-step-img"><img src="images/prozess-bericht.jpg" loading="lazy" decoding="async" alt="Schadstoffgutachten mit Handlungsempfehlung"></div>
+   <div class="ablauf-step-num">03</div>
+   <h3>Gutachten</h3>
+   <p>Befund, Einstufung und Empfehlung.</p>
   </div>
  </div>
 </section>
@@ -1144,36 +1248,66 @@ nav ul a{white-space:nowrap}
     <p class="sec-lead">Ein Schadstoffgutachten ist selten der teuerste Posten einer Sanierung – aber häufig der, der alles andere aufhält. Solange der Befund fehlt, kann nicht ausgeschrieben, nicht vergeben und nicht saniert werden. Die Wohnung steht. Die Kosten laufen.</p>
   </div>
 
-  <div class="tempo-grid">
-    <div class="tempo-card">
-      <div class="tempo-num">01</div>
-      <h3>Wir kennen die Rechnung dahinter</h3>
-      <p>Mietausfall, weiterlaufende Betriebskosten, verschobene Anschlussvermietung, im Zweifel ein zweites Mal Gerüst. Wer im Property Management gearbeitet hat, kennt diese Positionen nicht aus der Theorie. Genau deshalb behandeln wir Terminzusagen als Leistungsbestandteil – nicht als Serviceversprechen.</p>
+  <div class="flip-grid flip-grid--3">
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Wir kennen die Rechnung dahinter – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-num">01</div>
+     <h3>Wir kennen die Rechnung dahinter</h3>
+     <p>Terminzusagen sind Teil der Leistung.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
     </div>
-    <div class="tempo-card">
-      <div class="tempo-num">02</div>
-      <h3>Verbindliche Termine statt Zeitfenster</h3>
-      <p>Begehungstermin, Laufzeit der Laboranalytik und Berichtsabgabe werden vor Auftragserteilung schriftlich festgelegt. Sie planen den Sanierungsstart nicht um ein vages „in den nächsten Wochen“ herum, sondern um ein Datum.</p>
+    <div class="flip-face flip-back">
+     <h3>Wir kennen die Rechnung dahinter</h3>
+     <p>Mietausfall, weiterlaufende Betriebskosten, verschobene Anschlussvermietung, im Zweifel ein zweites Mal Gerüst. Wer im Property Management gearbeitet hat, kennt diese Positionen nicht aus der Theorie. Genau deshalb behandeln wir Terminzusagen als Leistungsbestandteil – nicht als Serviceversprechen.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
     </div>
-    <div class="tempo-card">
-      <div class="tempo-num">03</div>
-      <h3>Ein Bericht, mit dem sofort weitergearbeitet wird</h3>
-      <p>Unsere Berichte sind so aufgebaut, dass die Fachfirma direkt daraus ausschreiben und der Entsorger direkt deklarieren kann. Keine Rückfragerunden, keine Nachbeprobung, weil eine Position fehlt – der häufigste stille Zeitfresser im Ablauf.</p>
+   </div>
+  </div>
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Verbindliche Termine statt Zeitfenster – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-num">02</div>
+     <h3>Verbindliche Termine statt Zeitfenster</h3>
+     <p>Ein Datum statt „in den nächsten Wochen“.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
     </div>
+    <div class="flip-face flip-back">
+     <h3>Verbindliche Termine statt Zeitfenster</h3>
+     <p>Begehungstermin, Laufzeit der Laboranalytik und Berichtsabgabe werden vor Auftragserteilung schriftlich festgelegt. Sie planen den Sanierungsstart nicht um ein vages „in den nächsten Wochen“ herum, sondern um ein Datum.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
+  </div>
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Ein Bericht, mit dem sofort weitergearbeitet wird – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-num">03</div>
+     <h3>Ein Bericht, mit dem sofort weitergearbeitet wird</h3>
+     <p>Keine Rückfragerunden, keine Nachbeprobung.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>Ein Bericht, mit dem sofort weitergearbeitet wird</h3>
+     <p>Unsere Berichte sind so aufgebaut, dass die Fachfirma direkt daraus ausschreiben und der Entsorger direkt deklarieren kann. Keine Rückfragerunden, keine Nachbeprobung, weil eine Position fehlt – der häufigste stille Zeitfresser im Ablauf.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
+  </div>
   </div>
 
   <div class="tempo-note">
-    <div class="tempo-note-lbl">Ein Ansprechpartner</div>
-    <p><strong>Vom Ortstermin bis zur Rückfrage derselbe Kopf.</strong> Begehung, Probenahme, Bericht und jede spätere Nachfrage liegen bei einer Person – es gibt niemanden, der sich erst einlesen muss. Für Sie heißt das: eine Nummer, kein Projektstatus, der zwischen Beteiligten verloren geht, und ein Bericht, der genau von dem geschrieben wurde, der im Objekt stand.</p>
+    <div class="tempo-note-lbl">Fester Ansprechpartner</div>
+    <p><strong>Vom Ortstermin bis zur Rückfrage ein fester Ansprechpartner.</strong> Sie haben eine Nummer und eine Person, die Ihr Projekt kennt – kein Projektstatus, der zwischen Beteiligten verloren geht. Bei größeren Objekten und für Vertretungsfälle arbeiten wir mit erfahrenen Fachkollegen zusammen, damit Ihr Termin hält.</p>
   </div>
 </section>
 
-<!-- ÜBER MICH -->
+<!-- ÜBER UNS -->
 <section id="ueber">
  <div class="ueber-inner">
-  <div class="sec-eye" data-reveal>Über mich</div>
-  <h2 class="sec-title" data-reveal data-delay="1">Ihr Schadstoffgutachter für München und Frankfurt: Immobilienpraktiker, <em>ein</em> Fachgebiet.</h2>
-  <p class="sec-lead">Ich komme nicht aus dem Labor, sondern aus der Immobilienbewirtschaftung – zuletzt aus dem Asset Management für Wohn- und Gewerbeimmobilien. Und ich habe eine klare Haltung zu meiner Arbeit: Am schönsten ist es, nichts zu finden. Gesucht wird trotzdem gründlich.</p>
+  <div class="sec-eye" data-reveal>Über uns</div>
+  <h2 class="sec-title" data-reveal data-delay="1">Schadstoffgutachten von Immobilienpraktikern – <em>ein</em> Fachgebiet.</h2>
+  <p class="sec-lead">Wir kommen nicht aus dem Labor, sondern aus der Immobilienbewirtschaftung – und kennen Schadstoffgutachten aus der Sicht derer, die damit arbeiten müssen. Unsere Haltung: Am schönsten ist es, nichts zu finden. Gesucht wird trotzdem gründlich.</p>
 
   <div class="team-grid team-single">
     <div class="team-card">
@@ -1188,8 +1322,9 @@ nav ul a{white-space:nowrap}
           <li>M. A. Immobilienmanagement</li>
           <li>B. Sc. Wirtschaftsingenieurwesen – Technisches Asset Management</li>
         </ul>
-        <p>Über zehn Jahre in der Immobilienwirtschaft, zuletzt im Asset Management für Wohn- und Gewerbeimmobilien, davor in der Projektentwicklung mit Schwerpunkt Ausschreibung und Vergabe. Begehungen und Probenahmen führe ich ausnahmslos selbst durch – kein Subunternehmer, kein wechselnder Ansprechpartner.</p>
-        <p>In die Gutachten bringe ich die Perspektive des Bestandshalters ein: was ein Befund für Beleihungswert, Capex-Planung und Transaktionsfähigkeit bedeutet – und wie er formuliert sein muss, damit eine Hausverwaltung oder ein Investment Committee unmittelbar damit arbeiten kann.</p>
+        <p>Über zehn Jahre in der Immobilienwirtschaft, zuletzt im Asset Management für Wohn- und Gewerbeimmobilien, davor in der Projektentwicklung mit Schwerpunkt Ausschreibung und Vergabe. Durch seine Tätigkeit im Asset Management hat Alexander Kreith seit Jahren regelmäßig mit Schadstoffgutachten zu tun – und weiß, was ein Gutachten leisten muss, damit man damit arbeiten kann.</p>
+        <p>Diese Perspektive fließt in jedes Gutachten ein: was ein Befund für Beleihungswert, Capex-Planung und Transaktionsfähigkeit bedeutet – und wie er formuliert sein muss, damit Hausverwaltung, Fachfirma oder Investment Committee unmittelbar damit arbeiten können.</p>
+        <p class="team-proof"><a href="#kontakt">Sachkunde- und Fachkundenachweise sowie einen anonymisierten Musterbericht senden wir Ihnen gern auf Anfrage →</a></p>
       </div>
     </div>
   </div>
@@ -1213,36 +1348,96 @@ nav ul a{white-space:nowrap}
   <p>Hausverwaltungen, Bestandshalter, Asset Manager und Versicherer brauchen Schadstoffdaten, die nicht nur technisch korrekt sind, sondern sofort weiterverwendet werden können – für Ausschreibung, Entsorgung, Freigabe oder Gremienvorlage. Genau dafür sind unsere Berichte gebaut.</p>
  </div>
 
- <div class="inst-grid">
-  <div class="inst-card">
-  <div class="inst-card-icon"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21V12h6v9"/></svg></div>
-  <h3>Vom Einzelobjekt bis zum Bestand</h3>
-  <p>Ob einzelne WEG-Wohnung vor Sanierung oder mehrere Objekte im Bestand: gleiche Methodik, gleiche Berichtsstruktur, gleiche Termintreue. Neben München übernehmen wir nach Absprache auch Aufträge in Frankfurt am Main.</p>
+ <div class="flip-grid flip-grid--dark">
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Vom Einzelobjekt bis zum Bestand – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-icon flip-icon--line"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21V12h6v9"/></svg></div>
+     <h3>Vom Einzelobjekt bis zum Bestand</h3>
+     <p>Gleiche Methodik für jedes Objekt – bundesweit.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>Vom Einzelobjekt bis zum Bestand</h3>
+     <p>Ob einzelne WEG-Wohnung vor Sanierung oder mehrere Objekte im Bestand: gleiche Methodik, gleiche Berichtsstruktur, gleiche Termintreue – bundesweit.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
   </div>
-  <div class="inst-card">
-  <div class="inst-card-icon"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-  <h3>Beleihungs- und Bewertungs-Sicherheit</h3>
-  <p>Schadstofflagen können Beleihungswert und Marktbewertung spürbar beeinflussen. Auf Wunsch ordnen wir den Befund nach VDI 6202 Blatt 3 ein – ein Datenpunkt, mit dem Banken und Bewerter direkt arbeiten können.</p>
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Beleihungs- und Bewertungs-Sicherheit – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-icon flip-icon--line"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+     <h3>Beleihungs- und Bewertungs-Sicherheit</h3>
+     <p>Befunde, mit denen Banken und Bewerter arbeiten.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>Beleihungs- und Bewertungs-Sicherheit</h3>
+     <p>Schadstofflagen können Beleihungswert und Marktbewertung spürbar beeinflussen. Auf Wunsch ordnen wir den Befund nach VDI 6202 Blatt 3 ein – ein Datenpunkt, mit dem Banken und Bewerter direkt arbeiten können.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
   </div>
-  <div class="inst-card">
-  <div class="inst-card-icon"><svg viewBox="0 0 24 24"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
-  <h3>ESG- und CSRD-tauglich</h3>
-  <p>Schadstoffe sind Teil der EU-Taxonomie und CSRD-Materialität. Ergebnisse werden so dokumentiert, dass sie unmittelbar in ESG-Reports und Sustainability-Statements einfließen können.</p>
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="ESG- und CSRD-tauglich – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-icon flip-icon--line"><svg viewBox="0 0 24 24"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+     <h3>ESG- und CSRD-tauglich</h3>
+     <p>Direkt verwertbar im ESG-Reporting.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>ESG- und CSRD-tauglich</h3>
+     <p>Schadstoffe sind Teil der EU-Taxonomie und CSRD-Materialität. Ergebnisse werden so dokumentiert, dass sie unmittelbar in ESG-Reports und Sustainability-Statements einfließen können.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
   </div>
-  <div class="inst-card">
-  <div class="inst-card-icon"><svg viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
-  <h3>NDA &amp; Diskretion</h3>
-  <p>Bei laufenden Transaktionen und Refinanzierungen arbeiten wir unter Vertraulichkeitsvereinbarung. Lieferung im Geheimhaltungsrahmen Ihres Investment- oder Credit-Prozesses.</p>
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="NDA &amp; Diskretion – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-icon flip-icon--line"><svg viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div>
+     <h3>NDA &amp; Diskretion</h3>
+     <p>Vertraulich in laufenden Transaktionen.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>NDA &amp; Diskretion</h3>
+     <p>Bei laufenden Transaktionen und Refinanzierungen arbeiten wir unter Vertraulichkeitsvereinbarung. Lieferung im Geheimhaltungsrahmen Ihres Investment- oder Credit-Prozesses.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
   </div>
-  <div class="inst-card">
-  <div class="inst-card-icon"><svg viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
-  <h3>Sprache des Asset Managements</h3>
-  <p>Berichte mit Executive Summary, Risk-Rating, Capex-Schätzung und Handlungsempfehlung – nicht nur Laborwerte. Format ist abstimmbar auf Ihr internes Reporting.</p>
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Sprache des Asset Managements – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-icon flip-icon--line"><svg viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+     <h3>Sprache des Asset Managements</h3>
+     <p>Executive Summary statt reiner Laborwerte.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>Sprache des Asset Managements</h3>
+     <p>Berichte mit Executive Summary, Risk-Rating und Handlungsempfehlung mit Priorisierung – nicht nur Laborwerte. Format ist abstimmbar auf Ihr internes Reporting.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
   </div>
-  <div class="inst-card">
-  <div class="inst-card-icon"><svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
-  <h3>Verlässliche Timelines</h3>
-  <p>Bei Transaktions- oder Quartalsfristen entscheidet Geschwindigkeit. Liefertermine stimmen wir vor Auftragserteilung verbindlich mit Ihnen ab. Bei Eilbedarf sprechen Sie uns direkt an – wir prüfen gemeinsam, was möglich ist.</p>
+  <div class="flip" role="button" tabindex="0" aria-pressed="false" aria-label="Verlässliche Timelines – Details anzeigen">
+   <div class="flip-inner">
+    <div class="flip-face flip-front">
+     <div class="flip-icon flip-icon--line"><svg viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div>
+     <h3>Verlässliche Timelines</h3>
+     <p>Liefertermine vorab verbindlich.</p>
+     <span class="flip-hint">Mehr erfahren <span aria-hidden="true">↻</span></span>
+    </div>
+    <div class="flip-face flip-back">
+     <h3>Verlässliche Timelines</h3>
+     <p>Bei Transaktions- oder Quartalsfristen entscheidet Geschwindigkeit. Liefertermine stimmen wir vor Auftragserteilung verbindlich mit Ihnen ab. Bei Eilbedarf sprechen Sie uns direkt an – wir prüfen gemeinsam, was möglich ist.</p>
+     <span class="flip-hint"><span aria-hidden="true">←</span> Zurück</span>
+    </div>
+   </div>
   </div>
  </div>
 
@@ -1253,46 +1448,7 @@ nav ul a{white-space:nowrap}
  </div>
 </section>
 
-<!-- QUALIFIKATIONEN -->
-<section id="qualifikationen">
- <div class="qual-header" data-reveal>
- <div>
-  <div class="sec-eye">Nachweise</div>
-  <h2 class="sec-title">Qualifikationen & Fachkunde</h2>
- </div>
- <p class="sec-lead" style="max-width:340px;">Qualifikationsnachweise: Sachkunde nach TRGS 519 Anlage 3, Fachkunde nach TRGS 521 und Gerätefachkunde. Begehung, Probenahme und Bewertung übernimmt der Inhaber persönlich.</p>
- </div>
- <div class="qual-grid">
- <div class="qual-card" data-reveal data-delay="1">
-  <div class="qual-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
-  <h3>Sachkunde Asbest</h3>
-  <div class="qual-norm">TRGS 519 · Nr. 2.7, Anlage 3</div>
-  <p>Qualifikation für Begehungen, Probenahmen und Gutachten bei asbesthaltigen Baumaterialien im Bestand und vor Abbruch – und darüber hinaus für Abbruch-, Sanierungs- und Instandhaltungsarbeiten mit Asbest (ASI-Arbeiten, sog. „großer Asbestschein“).</p>
- </div>
- <div class="qual-card">
-  <div class="qual-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
-  <h3>Fachkunde Mineralfasern</h3>
-  <div class="qual-norm">TRGS 521</div>
-  <p>Qualifikation zur fachkundigen Beurteilung und Probenahme bei künstlichen Mineralfasern (alte Mineralwolle) in Sanierungs- und Abbruchobjekten.</p>
- </div>
- <div class="qual-card">
-  <div class="qual-badge"><svg viewBox="0 0 24 24"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg></div>
-  <h3>Gerätefachkunde</h3>
-  <div class="qual-norm">TRGS 519 – Probenahme & Messtechnik</div>
-  <p>Qualifikation im fachgerechten Umgang mit Probenahmesystemen und Messgeräten für die Schadstoffdiagnostik – Grundlage für belastbare Laborbefunde.</p>
- </div>
-   </div>
-  <div class="qual-request">
-    <div class="qual-request-icon">
-      <svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-    </div>
-    <div>
-      <h3>Nachweise und Musterbericht auf Anfrage</h3>
-      <p>Die vollständigen Sachkunde- und Fachkundenachweise stellen wir Ihnen auf Anfrage gerne zu – ebenso für Vergabeverfahren oder zur Ablage in Ihrer Objektakte. Wer vorab sehen möchte, wie ein Bericht bei uns aufgebaut ist, erhält auf Wunsch einen anonymisierten Musterbericht. Eine kurze E-Mail genügt.</p>
-      <a class="qual-request-link" href="#kontakt">Nachweise anfordern →</a>
-    </div>
-  </div>
-</section>
+
 
 <!-- FAQ -->
 <section id="faq">
@@ -1360,9 +1516,9 @@ nav ul a{white-space:nowrap}
   </div>
   <div class="k-item">
   <div class="k-icon"><svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-  <div><div class="k-lbl">Einsatzgebiete</div><div class="k-val">München &amp; Frankfurt am Main<br><span style="color:var(--muted);font-size:.85rem">Aufträge bundesweit</span></div></div>
+  <div><div class="k-lbl">Einsatzgebiet</div><div class="k-val">Bundesweit<br><span style="color:var(--muted);font-size:.85rem">Sitz in München</span></div></div>
   </div>
-  <div class="k-note">Rückmeldung in der Regel innerhalb von 24 Stunden, die erste Einschätzung kostet nichts. In München und Frankfurt am Main bekommen Sie den Ortstermin meist innerhalb einer Woche; außerhalb stimmen wir den Termin individuell ab.</div>
+  <div class="k-note">Ihr Angebot erhalten Sie innerhalb von 24 Stunden – die erste Einschätzung kostet nichts. Den Ortstermin sagen wir Ihnen mit dem Angebot verbindlich zu.</div>
  </div>
  <form class="form-wrap" id="kontakt-form" data-reveal data-delay="2" action="https://api.web3forms.com/submit" method="POST">
   <input type="hidden" name="access_key" value="99eb7fc6-dccd-4ac7-83bf-a099bebcc103">
@@ -1375,16 +1531,7 @@ nav ul a{white-space:nowrap}
   </div>
   <div class="fg"><label for="f-email">E-Mail</label><input id="f-email" type="email" name="E-Mail" placeholder="max@beispiel.de" required autocomplete="email"></div>
   <div class="fg"><label for="f-tel">Telefon (optional)</label><input id="f-tel" type="tel" name="Telefon" placeholder="+49 ..." autocomplete="tel"></div>
-  <div class="fg"><label for="f-standort">Standort des Objekts</label>
-  <select id="f-standort" name="Standort" required>
-   <option value="">Bitte wählen …</option>
-   <option>München & Umgebung</option>
-   
-   <option>Frankfurt am Main</option>
-   
-   <option>Anderer Standort (bundesweit)</option>
-  </select>
-  </div>
+  <div class="fg"><label for="f-standort">Ort des Objekts (PLZ / Stadt)</label><input id="f-standort" type="text" name="Standort" placeholder="z. B. 80538 München" required autocomplete="postal-code"></div>
   <div class="fg"><label for="f-art">Art der Anfrage</label>
   <select id="f-art" name="Anfrageart" required>
    <option value="">Bitte wählen …</option>
@@ -1551,5 +1698,12 @@ window.addEventListener('scroll', updateNavScroll, {passive:true});
 
 
 
+<script>
+document.querySelectorAll('.flip').forEach(function(c){
+  function t(){var on=c.classList.toggle('is-flipped');c.setAttribute('aria-pressed',on?'true':'false');}
+  c.addEventListener('click',t);
+  c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();t();}});
+});
+</script>
 </body>
 </html>
